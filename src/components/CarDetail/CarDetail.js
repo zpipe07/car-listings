@@ -14,8 +14,10 @@ const CarDetail = ({ car, clearSelectedCar }) => {
       <CarMake year={car.make} />
       <CarModel model={car.model} />
       <CarMileage mileage={car.mileage} />
-      {/* <img src={car.image_url} alt="" className="img" /> */}
-      <CarImage imageUrl={car.image_url} />
+      <CarImage
+        imageUrl={car.image_url}
+        title={`${car.year} ${car.make} ${car.model}`}
+      />
     </section>
   );
 };
