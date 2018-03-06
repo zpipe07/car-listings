@@ -37,7 +37,9 @@ class App extends Component {
     const direction = this.state.sorting.category
       ? this.state.sorting.direction * -1
       : 1;
+
     this.setState({
+      visibleCars: this.sortCars(this.state.visibleCars, category, direction),
       sorting: {
         category,
         direction,
@@ -45,16 +47,12 @@ class App extends Component {
     });
   }
 
-  sortCars(cars, sorting) {
+  sortCars(cars, category, direction) {
     return cars.sort((a, b) => {
-      return a - b;
+      return direction > 0
+        ? a[category] - b[category]
+        : b[category] - a[category];
     });
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // this.setState({
-    //   visibleCars: this.sortCars(prevState.visibleCars, this.state.sorting),
-    // });
   }
 
   render() {
