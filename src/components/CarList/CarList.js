@@ -5,9 +5,8 @@ import Car from '../Car/Car';
 const CarList = (props) => {
   return (
     <ul>
-      {props.cars.map((car) => {
-        const key = `${car.year}-${car.make}-${car.model}`;
-        return <Car car={car} key={key} />;
+      {props.cars.map((car, i) => {
+        return <Car car={car} onCarClick={() => props.onCarClick(i)} key={i} />;
       })}
     </ul>
   );

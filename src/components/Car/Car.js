@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Car = (props) => {
+const Car = ({ car, onCarClick }) => {
   return (
     <li>
-      <h3>{props.car.year}</h3>
-      <h2>{props.car.make}</h2>
-      <h1>{props.car.model}</h1>
+      <button onClick={onCarClick}>
+        <h3>{car.year}</h3>
+        <h2>{car.make}</h2>
+        <h1>{car.model}</h1>
+      </button>
     </li>
   );
 };
