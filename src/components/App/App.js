@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CarList from '../CarList/CarList';
 
+import cars from '../../mocks/cars';
+
 import './App.css';
 
 class App extends Component {
@@ -11,7 +13,7 @@ class App extends Component {
 
         <main>
           Hellow from main
-          <CarList />
+          <CarList cars={cars} />
         </main>
 
         <footer>Hello from footer</footer>
