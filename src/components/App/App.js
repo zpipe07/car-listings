@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CarList from '../CarList/CarList';
+import CarDetail from '../CarDetail/CarDetail';
 
 import cars from '../../mocks/cars';
 
@@ -10,13 +11,20 @@ class App extends Component {
     super(props);
     this.state = {
       cars,
+      visibleCars: cars,
       selectedCar: undefined,
     };
   }
 
-  onCarClick() {
+  onCarClick(index) {
     this.setState({
-      selectedCar: true,
+      selectedCar: this.state.visibleCars[index],
+    });
+  }
+
+  clearSelectedCar() {
+    this.setState({
+      selectedCar: undefined,
     });
   }
 
@@ -26,13 +34,16 @@ class App extends Component {
         <header>Hello from the header</header>
 
         <main>
-          {!this.state.selectedCar ? (
-            <CarList
-              cars={this.state.cars}
-              onCarClick={this.onCarClick.bind(this)}
+          {this.state.selectedCar ? (
+            <CarDetail
+              car={this.state.selectedCar}
+              clearSelectedCar={this.clearSelectedCar.bind(this)}
             />
           ) : (
-            <span>foobar</span>
+            <CarList
+              cars={this.state.visibleCars}
+              onCarClick={this.onCarClick.bind(this)}
+            />
           )}
         </main>
 
