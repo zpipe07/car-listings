@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CarList from '../CarList/CarList';
 import CarDetail from '../CarDetail/CarDetail';
 import CarSorting from '../CarSorting/CarSorting';
+import CarSearch from '../CarSearch/CarSearch';
 
 import cars from '../../mocks/cars';
 
@@ -55,6 +56,17 @@ class App extends Component {
     });
   }
 
+  onSearchSubmit(search) {
+    console.log(search);
+    this.setState({
+      visibleCars: this.filterCars(this.state.cars, search),
+    });
+  }
+
+  filterCars(cars, search) {
+    return cars.filter((car) => {});
+  }
+
   render() {
     return (
       <div className="App">
@@ -66,6 +78,8 @@ class App extends Component {
             />
           ) : (
             <div>
+              <CarSearch onSearchSubmit={this.onSearchSubmit.bind(this)} />
+
               <CarSorting
                 sorting={this.state.sorting}
                 onSortingClick={this.onSortingClick.bind(this)}
