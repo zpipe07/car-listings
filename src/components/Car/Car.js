@@ -7,7 +7,7 @@ const Car = ({ car, onCarClick }) => {
     <li className="Car">
       <button className="Car__button" onClick={onCarClick}>
         {car.year} {car.make} {car.model}
-        <em class="Car__miles">{car.mileage} miles</em>
+        <em className="Car__miles">{car.mileage} miles</em>
       </button>
     </li>
   );

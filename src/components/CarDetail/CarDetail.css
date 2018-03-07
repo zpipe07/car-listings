@@ -1,0 +1,7 @@
+.CarDetail__button {
+  font-size: 1rem;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid;
+}

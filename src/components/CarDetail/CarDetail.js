@@ -1,23 +1,23 @@
 import React from 'react';
-import CarYear from '../CarYear/CarYear';
-import CarMake from '../CarMake/CarMake';
-import CarModel from '../CarModel/CarModel';
-import CarMileage from '../CarMileage/CarMileage';
 import CarImage from '../CarImage/CarImage';
 
+import './CarDetail.css';
+
 const CarDetail = ({ car, clearSelectedCar }) => {
+  const title = `${car.year} ${car.make} ${car.model}`;
+
   return (
     <section>
-      <button onClick={clearSelectedCar}>Back</button>
+      <button className="CarDetail__button" onClick={clearSelectedCar}>
+        Back
+      </button>
 
-      <CarYear year={car.year} />
-      <CarMake year={car.make} />
-      <CarModel model={car.model} />
-      <CarMileage mileage={car.mileage} />
-      <CarImage
-        imageUrl={car.image_url}
-        title={`${car.year} ${car.make} ${car.model}`}
-      />
+      <h1>{title}</h1>
+      <h3>
+        <em>{car.mileage} miles</em>
+      </h3>
+
+      <CarImage imageUrl={car.image_url} title={title} />
     </section>
   );
 };

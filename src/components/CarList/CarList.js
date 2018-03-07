@@ -1,5 +1,6 @@
 import React from 'react';
 import Car from '../Car/Car';
+import CarLoader from '../CarLoader/CarLoader';
 
 import './CarList.css';
 
@@ -13,7 +14,7 @@ const CarList = (props) => {
           );
         })
       ) : (
-        <p>loading...</p>
+        <CarLoader />
       )}
     </ul>
   );
