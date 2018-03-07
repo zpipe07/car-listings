@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './CarSearch.css';
+
 class CarSearch extends Component {
   constructor(props) {
     super(props);
@@ -25,18 +27,22 @@ class CarSearch extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit.bind(this)}>
-        <label htmlFor="carSearch">Search for a car</label>
+      <form className="CarSearch__form" onSubmit={this.onFormSubmit.bind(this)}>
+        <label className="CarSearch__label" htmlFor="carSearch">
+          Search for a cars by year, make, and model
+        </label>
         <input
+          className="CarSearch__input"
           type="search"
           name="search"
           id="carSearch"
-          placeholder="1999 Chevy Astro"
           value={this.state.search}
           onChange={this.onInputChange.bind(this)}
         />
 
-        <button type="submit">Search</button>
+        <button className="CarSearch__button" type="submit">
+          Search
+        </button>
       </form>
     );
   }

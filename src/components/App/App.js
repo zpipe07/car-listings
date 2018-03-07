@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header';
 import CarList from '../CarList/CarList';
 import CarDetail from '../CarDetail/CarDetail';
 import CarSorting from '../CarSorting/CarSorting';
@@ -100,6 +101,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
+
         <main className="App__main">
           {this.state.selectedCar ? (
             <CarDetail

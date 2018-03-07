@@ -1,8 +1,10 @@
-.App {
-}
-
-.App__main {
+.Header {
   padding: var(--spacing);
   max-width: var(--app-width);
   margin: 0 auto;
+}
+
+.Header__title {
+  font-size: 1.5rem;
+  margin: 0;
 }

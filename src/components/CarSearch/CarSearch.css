@@ -1,0 +1,28 @@
+.CarSearch__form {
+  /*  */
+}
+
+.CarSearch__label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: var(--spacing);
+}
+
+.CarSearch__input,
+.CarSearch__button {
+  font-size: 1rem;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  margin-bottom: var(--spacing);
+  border: 1px solid;
+}
+
+.CarSearch__input {
+  margin-right: var(--spacing);
+  color: var(--black);
+}
+
+.CarSearch__button {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}

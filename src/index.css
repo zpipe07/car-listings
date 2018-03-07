@@ -1,5 +1,17 @@
+:root {
+  /* dimensions */
+  --app-width: 800px;
+  --spacing: 1rem;
+
+  /* colors */
+  --black: rgba(0, 0, 0, 0.7);
+  --white: rgba(255, 255, 255, 0.9);
+  --blue: #33658a;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: var(--black);
 }
