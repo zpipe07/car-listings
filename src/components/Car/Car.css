@@ -1,7 +1,15 @@
 .Car__button {
+  font-size: 1rem;
   background-color: transparent;
   display: block;
   width: 100%;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.Car__miles {
+  display: block;
+  margin-top: calc(var(--spacing) / 2);
+  color: var(--grey);
 }

@@ -1,7 +1,4 @@
 import React from 'react';
-import CarYear from '../CarYear/CarYear';
-import CarMake from '../CarMake/CarMake';
-import CarModel from '../CarModel/CarModel';
 
 import './Car.css';
 
@@ -9,9 +6,8 @@ const Car = ({ car, onCarClick }) => {
   return (
     <li className="Car">
       <button className="Car__button" onClick={onCarClick}>
-        <CarYear year={car.year} />
-        <CarMake make={car.make} />
-        <CarModel model={car.model} />
+        {car.year} {car.make} {car.model}
+        <em class="Car__miles">{car.mileage} miles</em>
       </button>
     </li>
   );
