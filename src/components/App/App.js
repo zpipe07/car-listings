@@ -4,22 +4,36 @@ import CarDetail from '../CarDetail/CarDetail';
 import CarSorting from '../CarSorting/CarSorting';
 import CarSearch from '../CarSearch/CarSearch';
 
-import cars from '../../mocks/cars';
-
 import './App.css';
+
+const apiUrl =
+  'https://gist.githubusercontent.com/creatifyme/2a334c00a117097bfdb47f031edf292c/raw/efb52ecf1cf92e2261f504ec7639c68b5ff390bd/cars.json';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cars,
-      visibleCars: cars,
+      cars: undefined,
+      visibleCars: undefined,
       selectedCar: undefined,
       sorting: {
         category: undefined,
-        direction: 1,
+        direction: undefined,
       },
     };
+  }
+
+  componentDidMount() {
+    fetch(apiUrl)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        this.setState({
+          cars: data,
+          visibleCars: data,
+        });
+      });
   }
 
   onCarClick(index) {
