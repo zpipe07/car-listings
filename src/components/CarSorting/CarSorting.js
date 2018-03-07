@@ -5,10 +5,10 @@ import './CarSorting.css';
 
 const CarSorting = ({ sorting, onSortingClick }) => {
   return (
-    <div className="CarSorting">
-      <h3>Sort</h3>
+    <div>
+      <h4 className="CarSorting__title">Sort Cars</h4>
       <ul className="CarSorting__list">
-        <li>
+        <li className="CarSorting__item">
           <CarSortButton
             category="year"
             direction={sorting.direction}
@@ -16,7 +16,7 @@ const CarSorting = ({ sorting, onSortingClick }) => {
             onClick={onSortingClick}
           />
         </li>
-        <li>
+        <li className="CarSorting__item">
           <CarSortButton
             category="mileage"
             direction={sorting.direction}
@@ -24,7 +24,7 @@ const CarSorting = ({ sorting, onSortingClick }) => {
             onClick={onSortingClick}
           />
         </li>
-        <li>
+        <li className="CarSorting__item">
           <CarSortButton
             category="created_at"
             direction={sorting.direction}

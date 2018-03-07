@@ -1,5 +1,5 @@
 .CarSearch__form {
-  /*  */
+  margin-bottom: calc(var(--spacing) * 2);
 }
 
 .CarSearch__label {

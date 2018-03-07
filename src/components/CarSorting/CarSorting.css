@@ -1,9 +1,19 @@
-.CarSorting {
+.CarSorting__title {
+  margin: 0 0 calc(var(--spacing) / 2) 0;
 }
 
 .CarSorting__list {
   list-style: none;
-  margin: 0 0 20px 0;
+  margin: 0 0 calc(var(--spacing) / 2) 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.CarSorting__item {
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+.CarSorting__item:not(:last-child) {
+  margin-right: var(--spacing);
 }
