@@ -1,22 +1,36 @@
 import React from 'react';
+import CarSortButton from '../CarSortButton/CarSortButton';
 
-const CarSorting = (props) => {
+import './CarSorting.css';
+
+const CarSorting = ({ sorting, onSortingClick }) => {
   return (
-    <div>
+    <div className="CarSorting">
       <h3>Sort</h3>
-      <ul>
+      <ul className="CarSorting__list">
         <li>
-          <button onClick={() => props.onSortingClick('year')}>By year</button>
+          <CarSortButton
+            category="year"
+            direction={sorting.direction}
+            active={sorting.category === 'year'}
+            onClick={onSortingClick}
+          />
         </li>
         <li>
-          <button onClick={() => props.onSortingClick('mileage')}>
-            By mileage
-          </button>
+          <CarSortButton
+            category="mileage"
+            direction={sorting.direction}
+            active={sorting.category === 'mileage'}
+            onClick={onSortingClick}
+          />
         </li>
         <li>
-          <button onClick={() => props.onSortingClick('listing')}>
-            By listing age
-          </button>
+          <CarSortButton
+            category="created_at"
+            direction={sorting.direction}
+            active={sorting.category === 'created_at'}
+            onClick={onSortingClick}
+          />
         </li>
       </ul>
     </div>

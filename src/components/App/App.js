@@ -66,7 +66,10 @@ class App extends Component {
             />
           ) : (
             <div>
-              <CarSorting onSortingClick={this.onSortingClick.bind(this)} />
+              <CarSorting
+                sorting={this.state.sorting}
+                onSortingClick={this.onSortingClick.bind(this)}
+              />
 
               <CarList
                 cars={this.state.visibleCars}
