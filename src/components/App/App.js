@@ -26,6 +26,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData() {
     fetch(apiUrl)
       .then((res) => {
         return res.json();

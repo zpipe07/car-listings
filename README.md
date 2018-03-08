@@ -31,6 +31,8 @@ I didn't quite get to everything I would have liked. Here are some to-dos:
 * **cache sorting result** - there's no need to recalculate intensive calculations. we could cache these results and reference them later.
 * **add PropTypes** - I ❤️ PropTypes.
 * **optimize sort method** - the native `sort()` method runs in O(nlogn) time. we could potentially get that closer to O(n).
+* **fix test warning** - if you run the tests you'll see a warning because we aren't actually mounting the App component. introducing a tool like Enzyme would allow us to easily mount our components.
+* **improve test coverage** - we're currently running very basic tests. let's expand their coverage.
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
