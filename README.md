@@ -22,6 +22,8 @@ npm run test
 
 I decided to use React. I bootstrapped the project with create-react-app. I decided against using a state managment tool like Redux because of the simplicity of the app and time constraints.
 
+I'm using some technologies that might cause compatability issues with older browsers. [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid), [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), and the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) are relatively new features. In a production application we would want to consider browser compatibility and potentially implement fallbacks.
+
 ### To-Dos
 
 I didn't quite get to everything I would have liked. Here are some to-dos:
