@@ -10,13 +10,25 @@ git clone https://github.com/zpipe07/car-listings.git
 # navigate into the directory
 cd car-listings
 
-# install dependencies
+# install dependencies (note: node v8.9.3 used)
 npm i
 # run the app
 npm start
 # run tests
 npm run test
 ```
+
+## Technical Decisions
+
+I decided to use React. I bootstrapped the project with create-react-app. I decided against using a state managment tool like Redux because of the simplicity of the app and time constraints.
+
+### To-Dos
+
+I didn't quite get to everything I would have liked. Here are some to-dos:
+
+* **cache sorting result** - there's no need to recalculate intensive calculations. we could cache these results and reference them later.
+* **add PropTypes** - I ❤️ PropTypes.
+* **optimize sort method** - the native `sort()` method runs in O(nlogn) time. we could potentially get that closer to O(n).
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

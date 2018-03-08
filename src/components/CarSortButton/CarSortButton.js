@@ -7,15 +7,24 @@ const CarSortButton = ({ category, label, direction, active, onClick }) => {
     direction > 0 ? 'CarSortButton--increasing' : 'CarSortButton--decreasing';
 
   return (
-    <button
-      className={
-        'CarSortButton' +
-        (active ? ` CarSortButton--active ${directionClass}` : '')
-      }
-      onClick={() => onClick(category)}
-    >
-      {label}
-    </button>
+    <div>
+      <label
+        className="CarSortButton__label"
+        id={`carSortButtonLabel-${category}`}
+      >
+        {label}
+      </label>
+      <button
+        className={
+          'CarSortButton' +
+          (active ? ` CarSortButton--active ${directionClass}` : '')
+        }
+        onClick={() => onClick(category)}
+        aria-labelledby={`carSortingTitle carSortButtonLabel-${category}`}
+      >
+        {label}
+      </button>
+    </div>
   );
 };
 

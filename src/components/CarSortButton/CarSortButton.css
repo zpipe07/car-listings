@@ -1,3 +1,7 @@
+.CarSortButton__label {
+  display: none;
+}
+
 .CarSortButton {
   font-size: 1rem;
   padding: calc(var(--spacing) / 2) calc(var(--spacing) * 1.75)
