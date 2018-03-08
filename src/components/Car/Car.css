@@ -6,6 +6,13 @@
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   text-align: left;
+  box-shadow: -0.5rem 0 0 0 #f6ae2d inset;
+  transition: background-color 0.1s linear;
+  cursor: pointer;
+}
+
+.Car__button:hover {
+  background-color: var(--lite-grey);
 }
 
 .Car__miles {

@@ -4,4 +4,15 @@
   background-color: var(--blue);
   color: var(--white);
   border: 1px solid;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: opacity 0.1s linear;
+}
+
+.CarDetail__button:hover {
+  opacity: 1;
+}
+
+.CarDetail__miles {
+  color: var(--grey);
 }

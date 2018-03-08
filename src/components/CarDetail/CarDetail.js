@@ -13,7 +13,8 @@ const CarDetail = ({ car, clearSelectedCar }) => {
       </button>
 
       <h1>{title}</h1>
-      <h3>
+
+      <h3 className="CarDetail__miles">
         <em>{car.mileage} miles</em>
       </h3>
 

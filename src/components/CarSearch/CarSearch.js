@@ -29,7 +29,7 @@ class CarSearch extends Component {
     return (
       <form className="CarSearch__form" onSubmit={this.onFormSubmit.bind(this)}>
         <label className="CarSearch__label" htmlFor="carSearch">
-          Search for a cars by year, make, and model
+          Search for cars by year, make, and model
         </label>
         <input
           className="CarSearch__input"

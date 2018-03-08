@@ -25,4 +25,11 @@
   background-color: var(--blue);
   border-color: var(--blue);
   color: var(--white);
+  opacity: 0.85;
+  cursor: pointer;
+  transition: opacity 0.1s linear;
+}
+
+.CarSearch__button:hover {
+  opacity: 1;
 }

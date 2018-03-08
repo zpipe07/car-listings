@@ -9,3 +9,8 @@
   );
   grid-gap: 20px;
 }
+
+.CarList__empty {
+  color: var(--grey);
+  text-align: center;
+}
