@@ -4,6 +4,7 @@ import CarList from '../CarList/CarList';
 import CarDetail from '../CarDetail/CarDetail';
 import CarSorting from '../CarSorting/CarSorting';
 import CarSearch from '../CarSearch/CarSearch';
+import { sortArray, filterCars } from '../../utils/utils';
 
 import './App.css';
 
@@ -55,7 +56,7 @@ class App extends Component {
       : 1;
 
     this.setState({
-      visibleCars: this.sortCars(this.state.visibleCars, category, direction),
+      visibleCars: sortArray(this.state.visibleCars, category, direction),
       sorting: {
         category,
         direction,
@@ -63,40 +64,32 @@ class App extends Component {
     });
   }
 
-  sortCars(cars, category, direction) {
-    return cars.sort((a, b) => {
-      return direction > 0
-        ? a[category] - b[category]
-        : b[category] - a[category];
-    });
-  }
-
   onSearchSubmit(search) {
     this.setState({
-      visibleCars: this.filterCars(this.state.cars, search),
+      visibleCars: filterCars(this.state.cars, search),
     });
   }
 
-  filterCars(cars, search) {
-    return cars.filter((car) => {
-      for (let i = 0; i < search.length; i++) {
-        const word = search[i].toLowerCase();
-        const match =
-          car.year
-            .toString(10)
-            .toLowerCase()
-            .match(word) ||
-          car.make.toLowerCase().match(word) ||
-          car.model.toLowerCase().match(word);
+  // filterCars(cars, search) {
+  //   return cars.filter((car) => {
+  //     for (let i = 0; i < search.length; i++) {
+  //       const word = search[i].toLowerCase();
+  //       const match =
+  //         car.year
+  //           .toString(10)
+  //           .toLowerCase()
+  //           .match(word) ||
+  //         car.make.toLowerCase().match(word) ||
+  //         car.model.toLowerCase().match(word);
 
-        if (!match) {
-          return false;
-        }
-      }
+  //       if (!match) {
+  //         return false;
+  //       }
+  //     }
 
-      return true;
-    });
-  }
+  //     return true;
+  //   });
+  // }
 
   render() {
     return (
