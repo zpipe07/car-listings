@@ -8,8 +8,8 @@
 }
 
 .CarLoader {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   border: 5px solid;
   border-color: var(--black) var(--lite-grey) var(--lite-grey) var(--lite-grey);
   position: absolute;

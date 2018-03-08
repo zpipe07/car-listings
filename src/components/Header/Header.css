@@ -2,6 +2,7 @@
   padding: var(--spacing);
   max-width: var(--app-width);
   margin: 0 auto;
+  border-bottom: 3px solid var(--red);
 }
 
 .Header__title {

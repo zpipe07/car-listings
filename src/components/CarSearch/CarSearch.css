@@ -1,9 +1,6 @@
-.CarSearch__form {
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
 .CarSearch__label {
   font-size: 1rem;
+  font-weight: bold;
   display: block;
   margin-bottom: var(--spacing);
 }

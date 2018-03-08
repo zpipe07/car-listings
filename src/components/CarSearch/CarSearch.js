@@ -27,7 +27,7 @@ class CarSearch extends Component {
 
   render() {
     return (
-      <form className="CarSearch__form" onSubmit={this.onFormSubmit.bind(this)}>
+      <form onSubmit={this.onFormSubmit.bind(this)}>
         <label className="CarSearch__label" htmlFor="carSearch">
           Search for cars by year, make, and model
         </label>

@@ -88,12 +88,14 @@ class App extends Component {
             />
           ) : (
             <div>
-              <CarSearch onSearchSubmit={this.onSearchSubmit.bind(this)} />
+              <div className="App__filters">
+                <CarSearch onSearchSubmit={this.onSearchSubmit.bind(this)} />
 
-              <CarSorting
-                sorting={this.state.sorting}
-                onSortingClick={this.onSortingClick.bind(this)}
-              />
+                <CarSorting
+                  sorting={this.state.sorting}
+                  onSortingClick={this.onSortingClick.bind(this)}
+                />
+              </div>
 
               <CarList
                 cars={this.state.visibleCars}
