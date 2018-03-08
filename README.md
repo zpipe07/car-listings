@@ -1,4 +1,22 @@
+# Car Listings
+
 [See a live demo here](http://zackpiper.com/car-listings/)
+
+## Getting Started
+
+```
+# clone this repo
+git clone https://github.com/zpipe07/car-listings.git
+# navigate into the directory
+cd car-listings
+
+# install dependencies
+npm i
+# run the app
+npm start
+# run tests
+npm run test
+```
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
