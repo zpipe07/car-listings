@@ -5,12 +5,13 @@
   background-color: transparent;
   position: relative;
   border: none;
+  border-bottom: 1px solid transparent;
   cursor: pointer;
 }
 
 .CarSortButton--active {
   color: var(--blue);
-  border-bottom: 1px solid;
+  border-color: inherit;
 }
 
 .CarSortButton--active::after {

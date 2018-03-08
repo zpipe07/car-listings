@@ -51,9 +51,10 @@ class App extends Component {
   }
 
   onSortingClick(category) {
-    const direction = this.state.sorting.category
-      ? this.state.sorting.direction * -1
-      : 1;
+    const direction =
+      this.state.sorting.category === category
+        ? this.state.sorting.direction * -1
+        : 1;
 
     this.setState({
       visibleCars: sortArray(this.state.visibleCars, category, direction),
@@ -67,6 +68,10 @@ class App extends Component {
   onSearchSubmit(search) {
     this.setState({
       visibleCars: filterArray(this.state.cars, search),
+      sorting: {
+        category: undefined,
+        direction: undefined,
+      },
     });
   }
 
