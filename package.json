@@ -2,7 +2,7 @@
   "name": "car-listings",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/zpipe07/car-listings",
+  "homepage": "http://zackpiper.com/car-listings/",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
