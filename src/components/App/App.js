@@ -4,7 +4,7 @@ import CarList from '../CarList/CarList';
 import CarDetail from '../CarDetail/CarDetail';
 import CarSorting from '../CarSorting/CarSorting';
 import CarSearch from '../CarSearch/CarSearch';
-import { sortArray, filterCars } from '../../utils/utils';
+import { sortArray, filterArray } from '../../utils/utils';
 
 import './App.css';
 
@@ -66,11 +66,11 @@ class App extends Component {
 
   onSearchSubmit(search) {
     this.setState({
-      visibleCars: filterCars(this.state.cars, search),
+      visibleCars: filterArray(this.state.cars, search),
     });
   }
 
-  // filterCars(cars, search) {
+  // filterArray(cars, search) {
   //   return cars.filter((car) => {
   //     for (let i = 0; i < search.length; i++) {
   //       const word = search[i].toLowerCase();

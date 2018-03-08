@@ -56,7 +56,22 @@ describe('utils', () => {
     });
   });
 
-  describe('filterCars', () => {
-    //
+  describe('filterArray', () => {
+    it('should filter by make', () => {
+      const result = utils.filterArray(cars, 'chevy');
+      expect(result.length).toEqual(1);
+      expect(result[0].make).toEqual('chevy');
+    });
+
+    it('should filter by make and model', () => {
+      const result = utils.filterArray(cars, 'ford ranger');
+      expect(result.length).toEqual(1);
+      expect(result[0].make).toEqual('ford');
+    });
+
+    it('should return an empty array', () => {
+      const result = utils.filterArray(cars, 'foo bar');
+      expect(result.length).toEqual(0);
+    });
   });
 });

@@ -7,10 +7,12 @@ export const sortArray = (array, key, direction) => {
   });
 };
 
-export const filterCars = (cars, search) => {
+export const filterArray = (cars, search) => {
+  const searchArray = search.split(' ');
+
   return cars.filter((car) => {
-    for (let i = 0; i < search.length; i++) {
-      const word = search[i].toLowerCase();
+    for (let i = 0; i < searchArray.length; i++) {
+      const word = searchArray[i].toLowerCase();
       const match =
         car.year
           .toString(10)
