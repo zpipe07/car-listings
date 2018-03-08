@@ -11,6 +11,7 @@ const CarSorting = ({ sorting, onSortingClick }) => {
         <li className="CarSorting__item">
           <CarSortButton
             category="year"
+            label="By year"
             direction={sorting.direction}
             active={sorting.category === 'year'}
             onClick={onSortingClick}
@@ -19,6 +20,7 @@ const CarSorting = ({ sorting, onSortingClick }) => {
         <li className="CarSorting__item">
           <CarSortButton
             category="mileage"
+            label="By mileage"
             direction={sorting.direction}
             active={sorting.category === 'mileage'}
             onClick={onSortingClick}
@@ -27,6 +29,7 @@ const CarSorting = ({ sorting, onSortingClick }) => {
         <li className="CarSorting__item">
           <CarSortButton
             category="created_at"
+            label="By listing date"
             direction={sorting.direction}
             active={sorting.category === 'created_at'}
             onClick={onSortingClick}

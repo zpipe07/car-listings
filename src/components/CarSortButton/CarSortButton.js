@@ -2,7 +2,7 @@ import React from 'react';
 
 import './CarSortButton.css';
 
-const CarSortButton = ({ category, direction, active, onClick }) => {
+const CarSortButton = ({ category, label, direction, active, onClick }) => {
   const directionClass =
     direction > 0 ? 'CarSortButton--increasing' : 'CarSortButton--decreasing';
 
@@ -14,7 +14,7 @@ const CarSortButton = ({ category, direction, active, onClick }) => {
       }
       onClick={() => onClick(category)}
     >
-      By {category}
+      {label}
     </button>
   );
 };

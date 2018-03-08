@@ -70,27 +70,6 @@ class App extends Component {
     });
   }
 
-  // filterArray(cars, search) {
-  //   return cars.filter((car) => {
-  //     for (let i = 0; i < search.length; i++) {
-  //       const word = search[i].toLowerCase();
-  //       const match =
-  //         car.year
-  //           .toString(10)
-  //           .toLowerCase()
-  //           .match(word) ||
-  //         car.make.toLowerCase().match(word) ||
-  //         car.model.toLowerCase().match(word);
-
-  //       if (!match) {
-  //         return false;
-  //       }
-  //     }
-
-  //     return true;
-  //   });
-  // }
-
   render() {
     return (
       <div className="App">
