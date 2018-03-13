@@ -22,7 +22,10 @@ class App extends Component {
         category: undefined,
         direction: undefined,
       },
+      search: '',
     };
+
+    this.carMap = new Map();
   }
 
   componentDidMount() {
@@ -54,14 +57,41 @@ class App extends Component {
     });
   }
 
+  getCars(cars, search = '', category = '', direction = '') {
+    const key = `${search}${category}${direction}`;
+
+    if (this.carMap.has(key)) {
+      return this.carMap.get(key);
+    }
+
+    let newCars;
+
+    if (search) {
+      newCars = filterArray(cars, search);
+    } else {
+      newCars = sortArray(cars, category, direction);
+    }
+
+    this.carMap.set(key, newCars);
+
+    return newCars;
+  }
+
   onSortingClick(category) {
     const direction =
       this.state.sorting.category === category
         ? this.state.sorting.direction * -1
         : 1;
 
+    const sortedCars = this.getCars(
+      this.state.visibleCars,
+      undefined,
+      category,
+      direction
+    );
+
     this.setState({
-      visibleCars: sortArray(this.state.visibleCars, category, direction),
+      visibleCars: sortedCars,
       sorting: {
         category,
         direction,
@@ -70,12 +100,20 @@ class App extends Component {
   }
 
   onSearchSubmit(search) {
+    const filteredCars = this.getCars(
+      this.state.cars,
+      search,
+      undefined,
+      undefined
+    );
+
     this.setState({
-      visibleCars: filterArray(this.state.cars, search),
+      visibleCars: filteredCars,
       sorting: {
         category: undefined,
         direction: undefined,
       },
+      search,
     });
   }
 

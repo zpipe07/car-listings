@@ -1,5 +1,7 @@
 export const sortArray = (array, key, direction) => {
-  return array.sort((a, b) => {
+  const _array = [].concat(array);
+
+  return _array.sort((a, b) => {
     const aKey = key === 'created_at' ? new Date(a[key]).getTime() : a[key];
     const bKey = key === 'created_at' ? new Date(b[key]).getTime() : b[key];
 
