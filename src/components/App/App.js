@@ -66,7 +66,7 @@ class App extends Component {
 
     let newCars;
 
-    if (search) {
+    if (!category) {
       newCars = filterArray(cars, search);
     } else {
       newCars = sortArray(cars, category, direction);
@@ -85,7 +85,7 @@ class App extends Component {
 
     const sortedCars = this.getCars(
       this.state.visibleCars,
-      undefined,
+      this.state.search,
       category,
       direction
     );

@@ -2,10 +2,10 @@ export const sortArray = (array, key, direction) => {
   const _array = [].concat(array);
 
   return _array.sort((a, b) => {
-    const aKey = key === 'created_at' ? new Date(a[key]).getTime() : a[key];
-    const bKey = key === 'created_at' ? new Date(b[key]).getTime() : b[key];
+    const aValue = key === 'created_at' ? new Date(a[key]).getTime() : a[key];
+    const bValue = key === 'created_at' ? new Date(b[key]).getTime() : b[key];
 
-    return direction * (aKey - bKey);
+    return direction * (aValue - bValue);
   });
 };
 
